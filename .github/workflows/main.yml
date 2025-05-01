@@ -44,6 +44,10 @@ jobs:
            -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml \
            -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/  
 
+      - name: SonarQube Scan Completed
+        run: echo "SonarQube scan completed. Quality Gate check skipped."
+
+
       # Check the Quality Gate status.
       - name: SonarQube Quality Gate check
         id: sonarqube-quality-gate-check
